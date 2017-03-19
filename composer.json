@@ -1,0 +1,22 @@
+{
+    "name": "basal/league-route-middleware",
+    "description": "PSR-15 middleware (single pass) for League Route",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Basal",
+            "email": "basal.php@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Basal\\Middleware\\LeagueRoute\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "http-interop/http-middleware": "^0.4.1",
+        "league/route": "^2.0"
+    }
+}
