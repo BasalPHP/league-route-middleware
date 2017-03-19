@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 /**
  * Class LeagueRouteMiddleware.
  */
-class LeagueRouteMiddleware implements MiddlewareInterface
+final class LeagueRouteMiddleware implements MiddlewareInterface
 {
     /** @var RouteCollection */
     private $route;
