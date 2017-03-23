@@ -2,6 +2,7 @@
 
 namespace Basal\Middleware\LeagueRoute\Provider;
 
+use Basal\Middleware\LeagueRoute\LeagueRouteMiddleware;
 use Interop\Container\ContainerInterface;
 use Interop\Container\ServiceProviderInterface;
 use League\Route\RouteCollection;
@@ -17,8 +18,19 @@ final class LeagueRouteMiddlewareInteropServiceProvider implements ServiceProvid
     public function getServices()
     {
         return [
+            LeagueRouteMiddleware::class => [$this, 'getMiddleware'],
             RouteCollection::class => [$this, 'getRouteCollection'],
         ];
+    }
+
+    /**
+     * @param ContainerInterface $container
+     *
+     * @return LeagueRouteMiddleware
+     */
+    public static function getMiddleware(ContainerInterface $container)
+    {
+        return new LeagueRouteMiddleware($container->get(RouteCollection::class));
     }
 
     /**
