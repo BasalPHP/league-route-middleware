@@ -1,7 +1,7 @@
 {
     "name": "basal/league-route-middleware",
     "description": "PSR-15 middleware (single pass) for League Route",
-    "type": "package",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
