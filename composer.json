@@ -18,5 +18,11 @@
         "php": ">=5.5",
         "http-interop/http-middleware": "^0.4.1",
         "league/route": "^2.0"
+    },
+    "require-dev": {
+        "container-interop/service-provider": "dev-master"
+    },
+    "suggest": {
+        "container-interop/service-provider": "Needed for interop service provider"
     }
 }
